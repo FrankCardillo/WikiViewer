@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <h1 class="title">Enter Your Search Query Into the Text Box Below</h1>
+  <ul class="list-inline" align="center">
+    <li>
+      <input id="query" type="text" class="searchBar">
+    </li>
+    <li>
+      <button id="search">Search</button>
+    </li>
+  </ul>
+</head>
+
+<body ng-app="WikiViewer" ng-controller="MainCtrl">
+  <div>
+    <ul>
+      <a ng-href="{{result.page}}" target="_blank" ng-repeat="result in results">
+
+        <li class="resultContainer">
+          <h1 class="resultTitle">{{result.title}}</h1>
+          <p class="resultBody">{{result.body}}</p>
+        </li>
+      </a>
+    </ul>
+
+  </div>
+</body>
+
+</html>
